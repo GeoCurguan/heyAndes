@@ -1,0 +1,15 @@
+.cardParent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1200px;
+}
+.cardContainer{
+    width: 350px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.cardContainer{
+    margin-left: 10px;
+    margin-top: 10px;
+}
