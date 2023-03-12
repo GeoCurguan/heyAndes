@@ -45,6 +45,7 @@ function Experiences () {
                 <>
                     {experiences[agencyId].experiences.map(experience => (
                         <div key={agencyId} className='cardContainer'>
+                        {/*Colocar card en un componente*/}
                         <Card >
                             <CardActionArea>
                                 <CardMedia
@@ -55,11 +56,11 @@ function Experiences () {
                                 />
                                 <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    {experiences[agencyId].agency.name}
+                                    <Link to={`/agencia/${experiences[agencyId].agency.key}`} >{experiences[agencyId].agency.name}</Link>
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
                                     {experience.name}
-                                    <Link to={`/experiencias/${experience.key}`}>Reservar</Link>
+                                    <Link to={`/${experiences[agencyId].agency.key}/${experience.key}`}>Reservar</Link>
                                 </Typography>
                                 </CardContent>
                             </CardActionArea>
@@ -70,20 +71,6 @@ function Experiences () {
                 </>
             ))
         }
-
-        {/*
-            Object.keys(experiences).map(agencyId => (
-                <div key={agencyId} className='cardContainer'>
-                    <h2 key={agencyId}>{experiences[agencyId].agency.name}</h2>
-                    <ul key={experiences[agencyId].agency.id}>
-                    {experiences[agencyId].experiences.map(experience => (
-                        <li key={experience.id}>{experience.name}</li>
-
-                    ))}
-                    </ul>
-                </div>
-            ))
-        */}
         </div>
     )
 }
