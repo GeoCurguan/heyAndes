@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;400;500&family=Yanone+Kaffeesatz:wght@500&display=swap');
+html, body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+}
+header{
+    width: 100%;
+    height: 12.5%;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 20%;
+    height: 100%;
+    background-image: url('../../assets/heyAndes_logo.svg');
+    background-size: 8.5vw;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.navMenu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+    font-size: 20px;
+}
+ul.nav {
+    padding-left: 0px;
+    text-align: center;
+}
+ul.nav li {
+    display: inline-block;
+    padding: 10px 20px;
+    transition: color .25s;
+}
+ul.nav li:hover {
+    cursor: pointer;
+    color: #888888;
+    transition: color .25s;
+}
+h1{
+    font-weight: 500;
+    /*font-size: 90px;*/
+    font-size: 4.8vw;
+    word-spacing: 5px;
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+.contenedor{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.bgWithOverlay{
+    width: 50%;
+    height: 100%;
+    background-image: url('../../assets/DSC064582.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    z-index: 1;
+}
+.bgWithOverlay::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(56, 113, 120, 0.8);
+}
+.bgMidWithoutOverlayContainer{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+}
+.bgMidWithoutOverlay{
+    width: 130%;
+    height: 70%;
+    margin-bottom: 5%;
+    background-image: url('../../assets/DSC064582.jpg');
+    background-size: cover;
+    background-position: 50% 0%;
+    margin-left: -30%;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+.textLanding{
+    width: 70%;
+    margin-top: 10%;
+    margin-left: -40%;
+}
+.textLanding p{
+    font-weight: 200;
+    /*font-size: 20px;*/
+    font-size: 1vw;
+    margin: 0;
+}
+.textLanding button{
+    margin-top: 5%;
+}
+.mainService{
+    width: 90%;
+    margin-left: 10%;
+    height: 32.5%;
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: space-between;
+}
+.serviceCard{
+    width: 30%;
+    height: 100%;
+    position: relative;
+    background-color: black;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    align-items: center;
+}
+.serviceCard h2{
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 1px;
+    margin-left: 10%;
+}
+.serviceCard::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: background-color .5s;
+    cursor: pointer;
+}
+.serviceCard:hover::after{
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color .5s;
+}
+.serviceCard:nth-of-type(1){
+    background-image: url('../../assets/20230223_222650_0000[1].jpg');
+}
+.serviceCard:nth-of-type(2){
+    background-image: url('../../assets/IMGL7120.jpg');
+}
+.serviceCard:nth-of-type(3){
+    background-image: url('../../assets/8.jpg');
+}
+button{
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #ff9d00;
+    border: none;
+    cursor: pointer;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+@media only screen and (max-width:1304px) {
+    .mainService{
+        margin-top: 15%;
+    }
+}
+@media only screen and (max-width:1024px) {
+    .mainService{
+        margin-top: 35%;
+    }
+    .navMenu{
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 767px){
+    header .logo{
+        width: 100%;
+        background-size: 175px;
+    }
+    header .navMenu{
+        display: none;
+    }
+    .bgWithOverlay{
+        display: none;
+    }
+    .bgMidWithoutOverlayContainer{
+        width: 100%;
+        align-items: flex-start;
+        justify-content: center;
+        z-index: 0;
+    }
+    .bgMidWithoutOverlay{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-left: 0;
+    }
+    .textLanding{
+        width: 70%;
+        margin-top: 10%;
+        margin-left: 0%;
+        text-align: center;
+    }
+    .textLanding h1{
+        font-size: 40px;
+    }
+    .textLanding p{
+        display: none;
+        font-size: 14px;
+    }
+    .textLanding button{
+        margin-top: 90px;
+    }
+    .mainService{
+        width: 100%;
+        margin-top: 50px;
+        margin-left: 0;
+    }
+    .serviceCard{
+        height: 150px;
+    }
+}

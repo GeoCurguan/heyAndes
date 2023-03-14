@@ -8,6 +8,9 @@ import ExperienceDetailsPage from './pages/ExperienceDetailsPage/ExperienceDetai
 import Inicio from './pages/Inicio/Inicio';
 import Experiences from './components/Experiences';
 
+//Estilos generales
+import './App.css'
+
 const GetAgencys = () => {
   const [agencys, setAgencys] = useState([])
   const agencyCollection = collection(db, 'agency')

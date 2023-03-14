@@ -1,10 +1,11 @@
 import Experiences from "../../components/Experiences";
+import Landing from "../../components/Landing/Landing";
 
 function Inicio() {
     return (
         <div>
-        Este es la pagina de Inicio
           <div className='wrapper'>
+            <Landing />
             <Experiences />
           </div>
         </div>
